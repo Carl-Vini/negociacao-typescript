@@ -1,6 +1,5 @@
 export class Negociacao {
 
-
     // construtor já com a declaração private
     constructor(
         private _data: Date,
@@ -9,7 +8,8 @@ export class Negociacao {
     }
 
     get data(): Date {
-        return this._data;
+        const data = new Date(this._data.getTime());
+        return data;
     }
     get quantidade(): number {
         return this._quantidade;
